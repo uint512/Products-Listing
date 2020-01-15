@@ -6,8 +6,15 @@ module.exports = {
 
 async function listProducts(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
+  const { offset = 0, limit = 25 } = req.query;
+
   try {
-    res.json(await Products.list());
+    res.json(
+      await Products.list({
+        offset: Number(offset),
+        limit: Number(limit)
+      })
+    );
   } catch (err) {
     console.error(err);
   }
