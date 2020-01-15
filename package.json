@@ -1,0 +1,23 @@
+{
+  "name": "Products-Listing",
+  "version": "1.0.0",
+  "description": "NodeJs Web Application - Educational Project to learn NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axolotol/Products-Listing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axolotol/Products-Listing/issues"
+  },
+  "homepage": "https://github.com/axolotol/Products-Listing#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
