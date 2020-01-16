@@ -8,6 +8,7 @@ const port = process.env.PORT || 1337;
 const app = express();
 
 app.use(middleware.cors);
+app.use(bodyParser.json());
 app.get("/products", api.listProducts);
 app.get("/products/:id", api.getProduct);
 app.post("/products", api.createProduct);
