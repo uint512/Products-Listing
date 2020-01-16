@@ -11,12 +11,12 @@ module.exports = {
 
 const Product = db.model("Product", {
   _id: { type: String, default: cuid },
-  description: String,
-  imgThumb: String,
-  img: String,
+  description: { type: String, required: true },
+  imgThumb: { type: String, required: true },
+  img: { type: String, required: true },
   link: String,
-  userId: String,
-  username: String,
+  userId: { type: String, required: true },
+  username: { type: String, required: true },
   userLink: String,
   tags: { type: [String], index: true }
 });
