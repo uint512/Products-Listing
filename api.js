@@ -36,9 +36,13 @@ async function createProduct(req, res, next) {
 }
 
 async function editProduct(req, res, next) {
-  res.json(req.body);
+  const change = req.body;
+  const product = await Products.edit(req.params.id, change);
+
+  res.json(product);
 }
 
 async function deleteProduct(req, res, next) {
+  await Products.remove(req.params.id);
   res.json({ success: true });
 }
