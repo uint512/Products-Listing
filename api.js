@@ -1,4 +1,4 @@
-const Products = require("./products");
+const Products = require("./models/products");
 const Orders = require("");
 const autoCatch = require("./lib/auto-catch");
 
