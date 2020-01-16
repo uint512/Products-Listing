@@ -12,6 +12,8 @@ app.use(bodyParser.json());
 app.get("/products", api.listProducts);
 app.get("/products/:id", api.getProduct);
 app.post("/products", api.createProduct);
+app.get("/orders", api.listOrders);
+app.post("/orders", api.createOrder);
 app.use(middleware.handleError);
 app.use(middleware.notFound);
 
