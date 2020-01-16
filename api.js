@@ -3,7 +3,8 @@ const autoCatch = require("./lib/auto-catch");
 
 module.exports = autoCatch({
   listProducts,
-  getProduct
+  getProduct,
+  createProduct
 });
 
 async function getProduct(req, res, next) {
@@ -25,4 +26,9 @@ async function listProducts(req, res) {
       tag
     })
   );
+}
+
+async function createProduct(req, res, next) {
+  console.log("request body", req.body);
+  res.json(req.body);
 }
