@@ -1,5 +1,7 @@
 module.exports = {
-  cors
+  cors,
+  handleError,
+  notFound
 };
 
 function cors(req, res, next) {
@@ -18,4 +20,14 @@ function cors(req, res, next) {
   );
 
   next();
+}
+
+function handleError(err, req, res, next) {
+  console.error(err);
+  if (res.headersSent) return next(err);
+  res.status(500).json({ error: "Internal error" });
+}
+
+function notFound(req, res) {
+  res.status(404).json({ error: "Not Found" });
 }
