@@ -31,8 +31,8 @@ async function listProducts(req, res) {
 }
 
 async function createProduct(req, res, next) {
-  console.log("request body", req.body);
-  res.json(req.body);
+  const product = await Products.create(req.body);
+  res.json(product);
 }
 
 async function editProduct(req, res, next) {
