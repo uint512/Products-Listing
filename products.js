@@ -8,7 +8,7 @@ module.exports = {
 };
 
 async function list(opts = {}) {
-  const { offset = 0, limit = 25 } = opts;
+  const { offset = 0, limit = 25, tag = "" } = opts;
   const data = await fs.readFile(productFiles);
   return JSON.parse(data)
     .filter((p, i) => !tag || p.tags.indexOf(tag) >= 0)
